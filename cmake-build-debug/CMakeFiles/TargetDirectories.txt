@@ -1,0 +1,3 @@
+/Users/dhawalp/CLionProjects/Data_S/cmake-build-debug/CMakeFiles/Data_S.dir
+/Users/dhawalp/CLionProjects/Data_S/cmake-build-debug/CMakeFiles/edit_cache.dir
+/Users/dhawalp/CLionProjects/Data_S/cmake-build-debug/CMakeFiles/rebuild_cache.dir
