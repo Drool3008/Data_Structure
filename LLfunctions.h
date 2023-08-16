@@ -160,4 +160,28 @@ public:
         }
         return head;
     }
+    static int recursive_length(LNode* head)
+    {
+        if(!head) return 0;
+        if(head->next==NULL) return 1;
+        return 1+ recursive_length(head->next);
+    }
+    static bool is_present(LNode* head,int data)
+    {
+        if(!head) return false;
+        if(head->data==data) return true;
+        else
+        {
+            return is_present(head->next,data);
+        }
+    }
+    static int index_of_elem(LNode* head,int data,int c=0)
+    {
+        if(!head) return -1;
+        if(head->data==data) return c;
+        else
+        {
+            return index_of_elem(head->next,data,++c);
+        }
+    }
 };

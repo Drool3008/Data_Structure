@@ -39,15 +39,18 @@ int main()
     LNode::print(head2);
     co<<LLfunc::length(head2)<<nl;
     */
-    LNode*head=LLfunc::take_Input_h();
-    LNode::print(head);
+//    LNode*head=LLfunc::take_Input_h();
+//    LNode::print(head);
 //    LLfunc::insert_at_i(head,200,30);
 //    LNode::print(head);
-    LNode* head1=LLfunc::delete_i_node_memory_leak(head,5);
-    LNode::print(head1);
+//    LNode* head1=LLfunc::delete_i_node_memory_leak(head,5);
+//    LNode::print(head1);
     co<<"------------------------"<<nl;
     LNode*head2=LLfunc::take_Input_h();
-    LNode* head3=LLfunc::delete_i_node(head2,3);
-    LNode::print(head3);
+    LNode::print(head2);
+    co<<LLfunc::recursive_length(head2)<<nl;
+    if(LLfunc::is_present(head2,27)) co<<"YES"<<nl;
+    else co<<"NO"<<nl;
+    co<<LLfunc::index_of_elem(head2,10)<<nl;
     return 0;
 }
