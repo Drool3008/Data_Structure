@@ -1,5 +1,5 @@
 
-#include "LLfunctions.h"
+#include "Leetcodefunc.h"
 #define co std::cout
 #define nl "\n"
 int main()
@@ -38,13 +38,16 @@ int main()
     LNode* head2=LLfunc::take_Input_t();
     LNode::print(head2);
     co<<LLfunc::length(head2)<<nl;
-    */
+
 //    LNode*head=LLfunc::take_Input_h();
 //    LNode::print(head);
 //    LLfunc::insert_at_i(head,200,30);
 //    LNode::print(head);
 //    LNode* head1=LLfunc::delete_i_node_memory_leak(head,5);
 //    LNode::print(head1);
+
+
+
     co<<"------------------------"<<nl;
     LNode*head2=LLfunc::take_Input_h();
     LNode::print(head2);
@@ -52,5 +55,15 @@ int main()
     if(LLfunc::is_present(head2,27)) co<<"YES"<<nl;
     else co<<"NO"<<nl;
     co<<LLfunc::index_of_elem(head2,10)<<nl;
+    */
+    //--------------------------------Leetcode functions----------------------------//
+
+    LNode* head=LLfunc::take_Input_h();
+    LNode::print(head);
+    LNode* r=Linked_List_Leetcode::reverse_List(head);
+    LNode::print(r);
+
+
+
     return 0;
 }
