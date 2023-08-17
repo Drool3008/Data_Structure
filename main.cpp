@@ -62,8 +62,5 @@ int main()
     LNode::print(head);
     LNode* r=Linked_List_Leetcode::reverse_List(head);
     LNode::print(r);
-
-
-
     return 0;
 }

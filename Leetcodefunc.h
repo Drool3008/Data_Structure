@@ -74,5 +74,104 @@ public:
         }
         return prev;
     }
+    static void delete_nth_from_last(LNode* head,int n)
+    {
+        LNode* fast=head;
+        LNode* slow=head;
+        while(n--)
+        {
+            fast=fast->next;
+        }
+        if(fast==NULL){
+            LNode *m=head;
+            slow=m->next;
+            delete m;
+            return;
+        }
+        while(fast->next)
+        {
+            slow=slow->next;
+            fast=fast->next;
+        }
+        LNode* m=slow->next;
+        slow->next=m->next;
+        delete m;
+    }
+
+    static LNode* mergeTwoLists_recursion(LNode* l1 ,LNode* l2)
+    {
+        if(!l1) return l2;
+        if(!l2) return l1;
+
+        LNode* head=NULL;
+        if(l1->data<l2->data)
+        {
+            head=l1;
+            head->next=mergeTwoLists_recursion(l1->next,l2);
+        }
+        else
+        {
+            head=l2;
+            head->next=mergeTwoLists_recursion(l1,l2->next);
+        }
+        return head;
+    }
+    static LNode* mergeTwoLists_iterative(LNode* l1,LNode* l2)
+    {
+        if(!l2) return l1;
+        if(!l1) return l2;
+        LNode*head =NULL;
+        if(l1->data<l2->data)
+        {
+            head=l1;
+            l1=l1->next;
+        } else
+        {
+            head=l2;
+            l2=l2->next;
+        }
+        LNode* tail=head;
+        while(l1 && l2)
+        {
+            if(l1->data<l2->data)
+            {
+                tail=l1;
+                l1=l1->next;
+            }
+            else
+            {
+                tail=l2;
+                l2=l2->next;
+            }
+            tail=tail->next;
+        }
+        if(l2)
+        {
+            tail->next=l2;
+        }
+        if(l1)
+        {
+            tail->next=l1;
+        }
+        return head;
+    }
+
+    static LNode* merge_sort_on_LL(LNode* head)
+    {
+        if(!head || !head->next) return head;
+        LNode*slow=head;
+        LNode*fast=head->next;
+        while(fast && fast->next)
+        {
+            slow=slow->next;
+            fast=fast->next->next;
+        }
+        LNode* n= slow->next;
+        slow->next=NULL;
+        LNode *l1=merge_sort_on_LL(head);
+        LNode *l2=merge_sort_on_LL(n);
+        LNode* ans = mergeTwoLists_recursion(l1,l2);
+        return ans;
+    }
 
 };
