@@ -1,5 +1,5 @@
 
-#include "Leetcodefunc.h"
+#include "Template_Stack.h"
 #define co std::cout
 #define nl "\n"
 int main()
@@ -58,9 +58,29 @@ int main()
     */
     //--------------------------------Leetcode functions----------------------------//
 
+    /*
     LNode* head=LLfunc::take_Input_h();
     LNode::print(head);
     LNode* r=Linked_List_Leetcode::reverse_List(head);
     LNode::print(r);
+
+    */
+    //--------------------------------Stack----------------------------//
+    _Stack<int>s;
+    s.push(10);
+    s.push(20);
+    s.push(30);
+    s.push(40);
+    s.push(50);
+    s.push(60);
+    co<<s.pop()<<" ";
+    co<<s.pop()<<" ";
+    co<<s.pop()<<" ";
+    co<<s.pop()<<" ";
+    co<<s.pop()<<" ";
+    co<<nl;
+    co<<s.isEmpty()<<nl;
+    co<<s.top()<<nl;
+    co<<s.size()<<nl;
     return 0;
 }

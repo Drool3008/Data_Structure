@@ -7,4 +7,6 @@ add_executable(Data_S main.cpp
         Vector.h
         LinkedList.h
         LLfunctions.h
-        Leetcodefunc.h)
+        Leetcodefunc.h
+        Stack.h
+        Template_Stack.h)
