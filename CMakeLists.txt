@@ -9,4 +9,5 @@ add_executable(Data_S main.cpp
         LLfunctions.h
         Leetcodefunc.h
         Stack.h
-        Template_Stack.h)
+        Template_Stack.h
+        Stack_using_LL.h)
