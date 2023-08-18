@@ -66,6 +66,7 @@ int main()
 
     */
     //--------------------------------Stack----------------------------//
+    /*
     _Stack<int>s;
     s.push(10);
     s.push(20);
@@ -82,5 +83,8 @@ int main()
     co<<s.isEmpty()<<nl;
     co<<s.top()<<nl;
     co<<s.size()<<nl;
+    */
+    co<<'2'-'0'<<nl;
+
     return 0;
-}
+ }
